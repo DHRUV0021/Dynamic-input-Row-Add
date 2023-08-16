@@ -17,7 +17,12 @@ export class AppComponent {
       this.newDynamic = {title1: "", title2: "",title3:""};  
       this.dynamicArray.push(this.newDynamic);  
   }  
-  
+
+  /**
+   * Add Row 
+   * @param index 
+   * @returns 
+   */
   addRow(index: any) {    
       this.newDynamic = {title1: "", title2: "",title3:""};  
       this.dynamicArray.push(this.newDynamic);  
@@ -26,6 +31,12 @@ export class AppComponent {
       return true;  
   }  
     
+
+  /**
+   * Delete Row 
+   * @param index 
+   * @returns 
+   */
   deleteRow(index: number) {  
       if(this.dynamicArray.length ==1) {  
         this.toastr.error("Can't delete the row when there is only one row", 'Warning');  
@@ -36,5 +47,4 @@ export class AppComponent {
           return true;  
       }  
   }  
-  
 } 
